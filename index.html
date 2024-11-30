@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة بودكاست</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dbdad5; /* اللون الفاتح */
+            color: #ffffff; /* لون النص أبيض */
+        }
+
+        /* مقدمة */
+        .header {
+            background-color: #11120e; /* اللون الداكن */
+            padding: 20px;
+            text-align: center;
+            color: #ffffff; /* لون النص أبيض */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* التخطيط */
+        .layout {
+            display: flex;
+        }
+
+        /* الشريط الجانبي */
+        .sidebar {
+            background-color: #3e3f3a; /* لون الشريط الجانبي */
+            width: 200px;
+            padding: 20px;
+            box-shadow: -4px 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar a {
+            display: block;
+            color: #dbdad5; /* لون النص */
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* المحتوى */
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* عرض 2 مربعات لكل صف */
+            gap: 20px;
+        }
+
+        .box {
+            background-color: #a1a19c; /* لون خلفية المربعات */
+            border: 2px solid #646560; /* لون الحدود */
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .box img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .box a {
+            display: block;
+            color: #ffffff; /* لون النص */
+            text-decoration: none;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+
+        /* مربع التعليق */
+        .comment-box {
+            background-color: #11120e; /* اللون الداكن */
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .comment-box textarea {
+            width: 90%;
+            height: 100px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .comment-box button {
+            background-color: #dbdad5;
+            color: #11120e; /* اللون الداكن */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment-box button:hover {
+            background-color: #a1a19c;
+        }
+    </style>
+</head>
+<body>
+    <!-- المقدمة -->
+    <div class="header">" صوت يلهمك "</div>
+
+    <!-- التخطيط العام -->
+    <div class="layout">
+        <!-- الشريط الجانبي -->
+        <div class="sidebar">
+            <a href="#group1">يمكن خيره !</a>
+            <a href="#group2">الوقت</a>
+            <a href="#group3">نفسك</a>
+            <a href="#group4">العلاقات</a>
+            <a href="#group5">القلب</a>
+        </div>
+
+        <!-- المحتوى -->
+        <div class="content">
+            <!-- المجموعة 1 -->
+            <div class="box" id="group1">
+                <img src="h1.jpg" alt="حسن الظن بالله">
+                <a href="https://youtu.be/ir_kb13jWws?si=OeQfVOj3NCoQkfpq" target="_blank">حسن الظن بالله</a>
+            </div>
+            <div class="box">
+                <img src="h2.jpg" alt="يمكن خيره ">
+                <a href="https://youtu.be/beIZuDC7gMo?si=NzH5LGdwEqeUOHGO" target="_blank">يمكن خيره</a>
+            </div>
+
+            <!-- المجموعة 2 -->
+            <div class="box" id="group2">
+                <img src="h3.jpg"مشتتات الوقت">
+                <a href="https://youtu.be/bQG2NuOWYYs?si=xO8z2ZG5qFDk41MB" target="_blank">مشتتات الوقت</a>
+            </div>
+            <div class="box">
+                <img src="h4.jpg" alt="كيف تتعلم بذكاء">
+                <a href="https://youtu.be/XKw0k6WpYqE?si=OWQfa0CcIvNQiOxX" target="_blank">كيف تتعلم بذكاء</a>
+            </div>
+
+            <!-- المجموعة 3 -->
+            <div class="box" id="group3">
+                <img src="h5.jpg" alt="لا تكن هشاً">
+                <a href="https://youtu.be/PMp3-qI6v2g?si=llAgSxuV8h1kJDg1" target="_blank">لا تكن هشاً</a>
+            </div>
+            <div class="box">
+                <img src="h6.jpg" alt="من خاف سلم">
+                <a href="https://youtu.be/J9jlL1xmayo?si=Abfuy-O_zrmWxTLv" target="_blank">من خاف سلم</a>
+            </div>
+
+            <!-- المجموعة 4 -->
+            <div class="box" id="group4">
+                <img src="h7.jpg" alt="العلاقة مع الذات ">
+                <a href="https://youtu.be/0zaOr_gyD8U?si=2iTQnJXMxJ9qjH3u" target="_blank">العلاقة مع الذات</a>
+            </div>
+            <div class="box">
+                <img src="h8.jpg" alt="كيف تنجح العلاقات">
+                <a href="https://youtu.be/pJ0auP7dbcY?si=XItItjDXQkmzVcVk" target="_blank">كيف تنجح العلاقات</a>
+            </div>
+
+            <!-- المجموعة 5 -->
+            <div class="box" id="group5">
+                <img src="h10.jpg" alt="كيف نبني علاقة مع الله">
+                <a href="https://youtu.be/G-IYILvvFtc?si=BNGBU1bj6QuoS1ME" target="_blank">كيف نبني علاقة مع الله  </a>
+            </div>
+            <div class="box">
+                <img src="h9.jpg" alt=" أثر القران">
+                <a href="https://youtu.be/w4R8qcSRAKc?si=ivbwPQI6T5A_0pLE" target="_blank"> أثر القران</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- مربع التعليقات -->
+    <div class="comment-box">
+        <h3>أضف تعليقك</h3>
+        <textarea placeholder="اكتب تعليقك هنا..."></textarea>
+        <button>إرسال</button>
+    </div>
+</body>
+</html>
